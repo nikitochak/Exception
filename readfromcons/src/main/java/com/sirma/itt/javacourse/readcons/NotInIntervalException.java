@@ -1,18 +1,33 @@
 package com.sirma.itt.javacourse.readcons;
 
 /**
- * Exception which is thrown when the number is not between 100 and 0. 
+ * Exception which is thrown when the number is not between 100 and 0.
  * 
  * @author Nikolay Ch
- *
+ * 
  */
 public class NotInIntervalException extends Exception {
+
+	/**
+	 * Empty constructor.
+	 */
+	public NotInIntervalException() {
+		
+	}
+	/**
+	 * The constructor fot the Exception.
+	 * 
+	 * @param error
+	 */
+	public NotInIntervalException(String  error) {
+		super(error);
+	}
+
 	/**
 	 * Says what the problem is.
 	 */
-	public void printError() {
-		System.out
-				.println("Your number must be between 0 and 100.But do not worry we will correct it.");
+	public String printError() {
+		return "Your number must be between 0 and 100.But do not worry we will correct it.";
 	}
 
 	/**

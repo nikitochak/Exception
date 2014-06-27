@@ -3,7 +3,7 @@ package com.sirma.itt.javacourse.listel;
 /**
  * 
  * Makes an List of objects and some methods for adding new element,removing and
- * printing all the lements.
+ * printing all the elements.
  * 
  * @author Nikolay Ch
  * 
@@ -31,6 +31,8 @@ public class List {
 	 * 
 	 * @param data
 	 *            the data we want to insert
+	 * @throws ArrayIndexOutOfBoundsException
+	 *             if you try to insert new element in full list
 	 */
 	public void add(Data data) {
 		try {
@@ -40,13 +42,16 @@ public class List {
 			list[towhere] = data;
 			towhere++;
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out
-					.println("Sorry the array is full.You can not insert any more data.");
+			throw new ArrayIndexOutOfBoundsException(
+					"Sorry the array is full.You can not insert any more data.");
 		}
 	}
 
 	/**
-	 * Removes the last element.
+	 * Removes the last of the list if it is not empty.
+	 * 
+	 * @throws ArrayINdexOutOfBoundsException
+	 *             if you try to remove an element in empty list
 	 */
 	public void remove() {
 		try {
@@ -55,8 +60,8 @@ public class List {
 			}
 			towhere--;
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out
-					.println("The list is empty you can not remove anything.");
+			throw new ArrayIndexOutOfBoundsException(
+					"The list is empty you can not remove anything.");
 		}
 	}
 

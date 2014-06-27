@@ -17,8 +17,9 @@ public class Read {
 	 * and appropriate exception.
 	 * 
 	 * @return the corrected number
+	 * @throws NotInIntervalException 
 	 */
-	public static int insert() {
+	public static int insert() throws NotInIntervalException {
 		sr = new Scanner(System.in);
 		num = sr.nextInt();
 		try {
@@ -30,9 +31,11 @@ public class Read {
 			}
 		} catch (NotInIntervalException e) {
 			num = e.correctMis(num);
-			e.printError();
-			return num;
+			
+			throw new NotInIntervalException(e.printError());
+			
 		}
+		
 	}
 
 	/**
@@ -41,8 +44,9 @@ public class Read {
 	 * @param num
 	 *            the number the customer want to check.
 	 * @return the corrected value if it is need
+	 * @throws NotInIntervalException 
 	 */
-	public static int insert(int num) {
+	public static int insert(int num) throws NotInIntervalException {
 
 		try {
 			if (num > 100 || num < 0)
@@ -53,8 +57,8 @@ public class Read {
 			}
 		} catch (NotInIntervalException e) {
 			num = e.correctMis(num);
-			e.printError();
-			return num;
+			throw new NotInIntervalException(e.printError());
+		
 		}
 	}
 }

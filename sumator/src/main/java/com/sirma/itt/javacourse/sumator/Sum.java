@@ -12,8 +12,8 @@ import java.util.Scanner;
 public class Sum {
 
 	private static Scanner sk; // reads from the console
-	private static String now; // the string read from the console
-	private static int num; // the integer it actually is
+	private static String line; // the string read from the console
+	private static int numberIs;
 
 	/**
 	 * String method which returns a string with only numbers. If the customer
@@ -27,18 +27,19 @@ public class Sum {
 		System.out.println("Please enter the number");
 
 		sk = new Scanner(System.in);
-		while (isCorrect == false) {
-			isCorrect = true;
+		
+			
 			try {
-				now = sk.next();
-				num = Integer.parseInt(now);
+				line = sk.next();
+				numberIs = Integer.parseInt(line);
 
 			} catch (NumberFormatException e) {
+				
 				isCorrect = false;
-				System.out.println("Please enter only numbers. " + now);
+				throw new NumberFormatException("Please only numbers");
 			}
-		}
-		return now;
+		
+		return line;
 
 	}
 
@@ -52,7 +53,7 @@ public class Sum {
 	 * @return the sum of the strings
 	 */
 	public static String Sumator(String a, String b) {
-		BigInteger sum=new BigInteger(a);
+		BigInteger sum = new BigInteger(a);
 		BigInteger second = new BigInteger(b);
 		sum = sum.add(second);
 

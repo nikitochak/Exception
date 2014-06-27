@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="73" started-at="2014-06-22T09:10:12Z" finished-at="2014-06-22T09:10:12Z">
+  <suite name="Default suite" duration-ms="108" started-at="2014-06-27T11:47:51Z" finished-at="2014-06-27T11:47:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="73" started-at="2014-06-22T09:10:12Z" finished-at="2014-06-22T09:10:12Z">
-      <class name="test.IntervalTest">
-        <test-method status="PASS" signature="TestInsert()[pri:0, instance:test.IntervalTest@11d2887]" name="TestInsert" duration-ms="36" started-at="2014-06-22T12:10:12Z" finished-at="2014-06-22T12:10:12Z">
+    <test name="Default test" duration-ms="108" started-at="2014-06-27T11:47:51Z" finished-at="2014-06-27T11:47:51Z">
+      <class name="com.sirma.itt.javacourse.readcons.IntervalExcTest">
+        <test-method status="FAIL" signature="TestInsert()[pri:0, instance:com.sirma.itt.javacourse.readcons.IntervalExcTest@2c22f3]" name="TestInsert" duration-ms="44" started-at="2014-06-27T14:47:51Z" finished-at="2014-06-27T14:47:51Z">
+          <exception class="org.testng.TestException">
+            <message>
+              <![CDATA[
+Expected exception com.sirma.itt.javacourse.readcons.NotInIntervalException but got org.testng.TestException: 
+Method IntervalExcTest.TestInsert()[pri:0, instance:com.sirma.itt.javacourse.readcons.IntervalExcTest@2c22f3] should have thrown an exception of class com.sirma.itt.javacourse.readcons.NotInIntervalException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestException: 
+Expected exception com.sirma.itt.javacourse.readcons.NotInIntervalException but got org.testng.TestException: 
+Method IntervalExcTest.TestInsert()[pri:0, instance:com.sirma.itt.javacourse.readcons.IntervalExcTest@2c22f3] should have thrown an exception of class com.sirma.itt.javacourse.readcons.NotInIntervalException
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1497)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1245)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.testng.TestException: 
+Method IntervalExcTest.TestInsert()[pri:0, instance:com.sirma.itt.javacourse.readcons.IntervalExcTest@2c22f3] should have thrown an exception of class com.sirma.itt.javacourse.readcons.NotInIntervalException
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1512)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:754)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	... 16 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestInsert -->
-      </class> <!-- test.IntervalTest -->
+      </class> <!-- com.sirma.itt.javacourse.readcons.IntervalExcTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
