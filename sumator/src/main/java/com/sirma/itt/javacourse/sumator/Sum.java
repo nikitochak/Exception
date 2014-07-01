@@ -13,6 +13,7 @@ public class Sum {
 
 	private static Scanner sk; // reads from the console
 	private static String line; // the string read from the console
+	@SuppressWarnings("unused")
 	private static int numberIs;
 
 	/**
@@ -23,22 +24,22 @@ public class Sum {
 	 * @return the value of a string with only numbers
 	 */
 	public static String input() {
+		@SuppressWarnings("unused")
 		boolean isCorrect = false;// keeps if the input data is correct
 		System.out.println("Please enter the number");
 
 		sk = new Scanner(System.in);
-		
-			
-			try {
-				line = sk.next();
-				numberIs = Integer.parseInt(line);
 
-			} catch (NumberFormatException e) {
-				
-				isCorrect = false;
-				throw new NumberFormatException("Please only numbers");
-			}
-		
+		try {
+			line = sk.next();
+			numberIs = Integer.parseInt(line);
+
+		} catch (NumberFormatException e) {
+
+			isCorrect = false;
+			throw new NumberFormatException("Please only numbers");
+		}
+
 		return line;
 
 	}
@@ -55,9 +56,8 @@ public class Sum {
 	public static String Sumator(String a, String b) {
 		BigInteger sum = new BigInteger(a);
 		BigInteger second = new BigInteger(b);
-		sum = sum.add(second);
 
-		return sum.toString();
+		return sum.add(second).toString();
 
 	}
 

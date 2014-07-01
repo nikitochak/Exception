@@ -2,7 +2,6 @@ package com.sirma.itt.javacourse.sumator;
 
 import org.junit.Test;
 
-import com.sirma.itt.javacourse.sumator.Sum;
 
 /**
  * Tests the methods in Sum.
